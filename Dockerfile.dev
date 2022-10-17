@@ -7,4 +7,5 @@ COPY ./ ./
 RUN npm run build
 # --from=builder는 as builder로 빌드한 내용을 가져온다는 뜻이고 build되어있는 경로를 첫번쨰로 그다음 그 경로에 있는 파일을 카피할곳을 두번쨰로 둔다
 FROM nginx
+WORKDIR /practice_react
 COPY --from=builder /practice_react/build /usr/share/nginx/html

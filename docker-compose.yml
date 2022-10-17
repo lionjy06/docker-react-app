@@ -12,12 +12,12 @@ services:
     stdin_open: true
 # 
 # 
-  tests:
-    build: 
-      context: .
-      dockerfile: Dockerfile.dev
-    volumes:
-      - /practice_react/node_modules
-      - ./:/practice_react/
-    command: npm run test
+  # tests:
+  #   build: 
+  #     context: .
+  #     dockerfile: Dockerfile.dev
+  #   volumes:
+  #     - /practice_react/node_modules
+  #     - ./:/practice_react
+  #   command: npm run test
 
