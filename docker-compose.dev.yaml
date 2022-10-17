@@ -20,3 +20,4 @@ services:
       - /practice_react/node_modules
       - ./:/practice_react/
     command: npm run test
+
