@@ -1,0 +1,22 @@
+version: '3.3'
+services:
+  docker-react:
+    build: 
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - 3000:3000
+    volumes:
+      - /practice_react/node_modules
+      - ./:/practice_react
+    stdin_open: true
+
+
+  tests:
+    build: 
+      context: .
+      dockerfile: Dockerfile.dev
+    volumes:
+      - /practice_react/node_modules
+      - ./:/practice_react/
+    command: npm run test
