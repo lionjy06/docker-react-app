@@ -7,7 +7,7 @@ services:
   - docker
 # 실행전 해야할 것들 써주기
 before_install:
-  - docker build -t lionjy06/docker-react-app -f Dockerfile.dev
+  - docker build -t lionjy06/docker-react-app -f Dockerfile
 #  실행 키워드 -e CI=true가 없으면 travis에서 에러남
 script:
   - docker run -e CI=true lionjy06/docker-react-app npm run test -- --coverage
