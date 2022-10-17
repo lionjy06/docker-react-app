@@ -10,7 +10,7 @@ services:
       - /practice_react/node_modules
       - ./:/practice_react
     stdin_open: true
-
+# 
 # 
   tests:
     build: 
